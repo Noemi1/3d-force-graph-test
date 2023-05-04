@@ -1,0 +1,224 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "name": "UOL",
+            "report_To": null,
+            "val": 20,
+            "status": "OK",
+            "type": 3,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:05.7897620",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [],
+            "dependents": [
+                {
+                    "id": 12,
+                    "name": "APIs Aldrin",
+                    "status": "Down"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "BD SQLEXPRESS",
+            "report_To": null,
+            "val": 10,
+            "status": "OK",
+            "type": 1,
+            "sub_Type": 1,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:07.4781210",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                },
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:07.4781210",
+                    "item": "Lock",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [],
+            "dependents": []
+        },
+        {
+            "id": 9,
+            "name": "Token Creta",
+            "report_To": null,
+            "val": 10,
+            "status": "Down",
+            "type": 5,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:04.5070780",
+                    "item": "Status",
+                    "status": "Down",
+                    "message": "Unable to perform the test. Impossível conectar-se ao servidor remoto - System.Net.Sockets.SocketException (0x80004005): Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou a conexão estabelecida falhou\r\nporque o host conectado não respondeu 200.220.186.165:443\r\n   em System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)\r\n   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)"
+                }
+            ],
+            "dependsOn": [],
+            "dependents": []
+        },
+        {
+            "id": 10,
+            "name": "Webservice TOTVS Processamento Fundos",
+            "report_To": null,
+            "val": 20,
+            "status": "Down",
+            "type": 5,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:39.8738340",
+                    "item": "Status",
+                    "status": "Down",
+                    "message": "Unable to perform the test. Um ou mais erros. - System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu\r\ncorretamente após um período de tempo ou a conexão estabelecida falhou\r\nporque o host conectado não respondeu 172.16.172.215:443\r\n   em System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)\r\n   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)\r\n   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)\r\n   --- Fim do rastreamento de pilha de exceções internas ---\r\n   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)\r\n   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)\r\n   --- Fim do rastreamento de pilha de exceções internas ---\r\n   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)\r\n   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   em System.Net.Http.HttpClient.<FinishSendAsyncBuffered>d__58.MoveNext()"
+                }
+            ],
+            "dependsOn": [],
+            "dependents": [
+                {
+                    "id": 12,
+                    "name": "APIs Aldrin",
+                    "status": "Down"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "name": "Conectividade BD Aldrin",
+            "report_To": null,
+            "val": 20,
+            "status": "OK",
+            "type": 6,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:16.3155860",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [],
+            "dependents": [
+                {
+                    "id": 12,
+                    "name": "APIs Aldrin",
+                    "status": "Down"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "APIs Aldrin",
+            "report_To": null,
+            "val": 10,
+            "status": "Down",
+            "type": 9,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:15.6656530",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [
+                {
+                    "id": 11,
+                    "name": "Conectividade BD Aldrin",
+                    "status": "OK"
+                },
+                {
+                    "id": 1,
+                    "name": "UOL",
+                    "status": "OK"
+                },
+                {
+                    "id": 10,
+                    "name": "Webservice TOTVS Processamento Fundos",
+                    "status": "Down"
+                }
+            ],
+            "dependents": []
+        },
+        {
+            "id": 13,
+            "name": "VWRetornaPL",
+            "report_To": "Acionar Equipe BulleST",
+            "val": 10,
+            "status": "OK",
+            "type": 9,
+            "sub_Type": null,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:17.2817200",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [
+                {
+                    "id": 14,
+                    "name": "BD Aldrin",
+                    "status": "OK"
+                }
+            ],
+            "dependents": []
+        },
+        {
+            "id": 14,
+            "name": "BD Aldrin",
+            "report_To": "Acionar equipe NTT Data",
+            "val": 20,
+            "status": "OK",
+            "type": 1,
+            "sub_Type": 3,
+            "statusItems": [
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:06.5798360",
+                    "item": "Status",
+                    "status": "OK",
+                    "message": null
+                },
+                {
+                    "bg": "VM05",
+                    "checked_On": "18:40:06.5798360",
+                    "item": "Lock",
+                    "status": "OK",
+                    "message": null
+                }
+            ],
+            "dependsOn": [],
+            "dependents": [
+                {
+                    "id": 13,
+                    "name": "VWRetornaPL",
+                    "status": "OK"
+                }
+            ]
+        }
+    ]
+}
